@@ -1,0 +1,29 @@
+{
+  "name": "mern-stack-ecommerce",
+  "version": "1.0.0",
+  "description": "Mern stack shop",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node men-back-end/server",
+    "server": "nodemon men-back-end/server",
+    "client": "npm start --prefix mern-front-end",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node men-back-end/seeder",
+    "data:destroy": "node men-back-end/seeder -d"
+  },
+  "author": "Meer Habib",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
